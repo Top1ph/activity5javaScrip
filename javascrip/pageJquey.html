@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY</title>
+</head>
+<body>
+    <h1>WELCOME TO JQUERY FUNCTION</h1>
+    <h2 id="samplejs"></h2>
+    <h2 class="showAnother" style="display: none;">Example Jquery Functions</h2>
+    <h2 id="name"></h2>
+    <button type="button" id="clickME">CLICK ME</button>
+    <h2 id="showClick" style="display: none;">VELARDE</h2>
+    <!--Alert To DISPLEY THEN NAME-->
+    
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#samplejs").text("EXAMPLE JQUERY");
+            $("#samplejs").css("color","blue").fadeOut(5000);
+            $(".showAnother").fadeIn(5000).show();
+
+           var name = showName("JHON ERIC VELARDE  BSIS INSTRUCTOR");
+           $("#name").text(name).addClass("ERIC");
+           
+           //click button
+           $("#clickMe").click(function() {
+             $("showClick").show();
+           });
+
+            $(".showAlert").click(function(){
+                const name = AlertInputName();
+                $("displayName").text(name);
+             });
+
+        });
+
+        function showName(name){
+        return name;
+
+    }
+    function AlertInputName(){
+        var name = prompt("Enter your name:")
+        return name;
+    }
+    </script>
+
+   
+</body>
+</html>
